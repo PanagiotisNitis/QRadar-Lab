@@ -17,7 +17,7 @@ If someone tries to log in and fails (`Authentication.Admin Login Failure`) **5 
 
 ---
 
-## Step 2: The Attack & The Alert
+## Step 2: The Attack & The Offense
 I went to my Kali Linux machine and ran a quick brute force attack against the Ubuntu Server using wrong passwords. 
 
 Immediately, QRadar caught it! It didn't open 11 different alerts. Instead, it combined everything into **one clean Offense** because the traffic came from the same Kali IP.
