@@ -38,3 +38,7 @@ As a SOC Analyst, I can see all the evidence in one place:
 ![Incident View](Screenshots/Incident_View.png)
 
 This was an awesome hands-on project to practice real-time log analysis and SIEM correlation!
+
+## What I learned
+- How QRadar correlates many failed login events into **one Offense** instead of flooding the analyst with separate alerts.
+- Correlation rules reduce alert noise in a real SOC workflow.
