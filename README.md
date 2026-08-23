@@ -12,9 +12,10 @@ Hey everyone! Today I built a home lab to simulate and detect an SSH Brute Force
 ## Step 1: Making the Rule
 I created a custom rule in QRadar. The logic is simple: 
 If someone tries to log in and fails (`Authentication.Admin Login Failure`) **5 times** from the **same Source IP** within **1 minute**, QRadar triggers an alert.
+**MITRE ATT&CK:** T1110 – Brute Force
 
 ![Offense Setup](Screenshots/Offense_Setup.png)
-
+Custom correlation rule
 ---
 
 ## Step 2: The Attack & The Offense
@@ -23,7 +24,7 @@ I went to my Kali Linux machine and ran a quick brute force attack against the U
 Immediately, QRadar caught it! It didn't open 11 different alerts. Instead, it combined everything into **one clean Offense** because the traffic came from the same Kali IP.
 
 ![My First Offense](Screenshots/My_First_Offense.png)
-
+Offense created after 5 failed logins
 ---
 
 ## Step 3: SOC Analyst Investigation
@@ -36,6 +37,8 @@ As a SOC Analyst, I can see all the evidence in one place:
 * The exact log events at the bottom
 
 ![Incident View](Screenshots/Incident_View.png)
+Offense investigation view
+---
 
 This was an awesome hands-on project to practice real-time log analysis and SIEM correlation!
 
